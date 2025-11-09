@@ -1,0 +1,132 @@
+{
+    "id": "1cf47842-c714-40be-ae37-92a89f60fea6",
+    "created_at": "2025-11-09T11:18:36Z",
+    "update_at": "2025-11-09T11:19:52Z",
+    "global_timeout": 20,
+    "tunnel_name": "",
+    "start_time": "2025-11-09T11:18:45Z",
+    "end_time": "2025-11-09T11:19:52Z",
+    "summary": {
+        "total_time": 67000000000,
+        "execution_time": 67000000000,
+        "total_tasks": 2,
+        "build_time_consumed": 96000000000,
+        "jobTestExecutionTime": "14s",
+        "failed_tasks": 0,
+        "total_stage_info": {
+            "prerun": {
+                "StageFailedPercent": 0,
+                "StagePassPercent": 100,
+                "TotalStage": 2
+            },
+            "scenario": {
+                "StageFailedPercent": 0,
+                "StagePassPercent": 100,
+                "TotalStage": 1
+            },
+            "test_discovery": {
+                "StageFailedPercent": 0,
+                "StagePassPercent": 100,
+                "TotalStage": 2
+            }
+        },
+        "status": "completed",
+        "job_link": "https://hyperexecute.lambdatest.com/hyperexecute/task?jobId=1cf47842-c714-40be-ae37-92a89f60fea6"
+    },
+    "tasks": [
+        {
+            "id": "HYPW-2878253-1762687124957897016DJV",
+            "os": "win",
+            "status": "completed",
+            "remark": "completed",
+            "debug": false,
+            "created_at": "2025-11-09T11:18:45Z",
+            "update_at": "2025-11-09T11:19:52Z",
+            "start_time": "2025-11-09T11:18:45Z",
+            "end_time": "2025-11-09T11:19:52Z",
+            "group_number": 1,
+            "stages": [
+                {
+                    "id": "62ac5b7c-fe9e-4a4d-be99-32eb14bfe949",
+                    "type": "scenario",
+                    "status": "completed",
+                    "name": "tests/login.spec.ts",
+                    "iteration": 0,
+                    "link": "command.1.0.log",
+                    "created_at": "2025-11-09T11:19:16Z",
+                    "started_at": "2025-11-09T11:19:17Z",
+                    "updated_at": "2025-11-09T11:19:50Z",
+                    "order": 4,
+                    "task_number": 1
+                },
+                {
+                    "id": "63e95905-c112-4f59-9b85-7f3ba8deb0ed",
+                    "type": "prerun",
+                    "status": "completed",
+                    "name": "pre",
+                    "iteration": 0,
+                    "link": "pre.log",
+                    "created_at": "2025-11-09T11:18:46Z",
+                    "started_at": "2025-11-09T11:18:46Z",
+                    "updated_at": "2025-11-09T11:19:16Z",
+                    "order": 2,
+                    "task_number": 1
+                },
+                {
+                    "id": "c830082f-486b-404b-9a65-4dc5347f3c8f",
+                    "type": "test_discovery",
+                    "status": "completed",
+                    "name": "discovery",
+                    "iteration": 0,
+                    "link": "discovery.log",
+                    "created_at": "2025-11-09T11:19:16Z",
+                    "started_at": "2025-11-09T11:19:16Z",
+                    "updated_at": "2025-11-09T11:19:16Z",
+                    "order": 3,
+                    "task_number": 1
+                }
+            ]
+        },
+        {
+            "id": "HYPW-2878253-1762687124970908505PBR",
+            "os": "win",
+            "status": "completed",
+            "remark": "completed",
+            "debug": false,
+            "created_at": "2025-11-09T11:18:45Z",
+            "update_at": "2025-11-09T11:19:14Z",
+            "start_time": "2025-11-09T11:18:45Z",
+            "end_time": "2025-11-09T11:19:14Z",
+            "group_number": 2,
+            "stages": [
+                {
+                    "id": "2bd598f4-32db-4b9d-a414-c78d5c0160aa",
+                    "type": "prerun",
+                    "status": "completed",
+                    "name": "pre",
+                    "iteration": 0,
+                    "link": "pre.log",
+                    "created_at": "2025-11-09T11:18:46Z",
+                    "started_at": "2025-11-09T11:18:46Z",
+                    "updated_at": "2025-11-09T11:19:14Z",
+                    "order": 2,
+                    "task_number": 2
+                },
+                {
+                    "id": "dafea927-9c59-4120-aecf-efa56f8027c8",
+                    "type": "test_discovery",
+                    "status": "completed",
+                    "name": "discovery",
+                    "iteration": 0,
+                    "link": "discovery.log",
+                    "created_at": "2025-11-09T11:19:14Z",
+                    "started_at": "2025-11-09T11:19:14Z",
+                    "updated_at": "2025-11-09T11:19:14Z",
+                    "order": 3,
+                    "task_number": 2
+                }
+            ]
+        }
+    ],
+    "test_ids": null
+}

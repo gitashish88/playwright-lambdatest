@@ -1,4 +1,4 @@
-import { Page, test, expect } from "@playwright/test";
+import { Page, test } from "@playwright/test";
 import { LoginPage } from "../pages/login";
 import { MyAccountPage } from "../pages/my-account-page";
 
@@ -14,21 +14,16 @@ test.describe('Login Tests', () => {
         myAccountPage = new MyAccountPage(page);
     });
 
-    test.afterEach(async () => {
+    test.afterEach(async ({ browser }) => {
         await page.close();
+        await browser.close();
     });
 
-    test('Login & logout with valid credentials', async () => {
+    test('Login & logout with valid credentials',{ tag: ['@RegressionTests'] }, async () => {
         await loginPage.navigateToLoginPage();
         await loginPage.login('a.r.sharma111@gmail.com', 'ashish@88');
         await page.waitForLoadState('networkidle');
         await myAccountPage.logoutUser();
     });
-
-    // test('Login with invalid credentials', async () => {
-    //     await loginPage.navigateToLoginPage();
-    //     await loginPage.login('invalid@example.com', 'wrongpassword');
-    //     await expect(loginPage.errorMessage).toBeVisible();
-    // });
 
 });

@@ -1,0 +1,55 @@
+version: "0.1"
+globalTimeout: 20
+testSuiteTimeout: 10
+testSuiteStep: 5
+runson: win
+autosplit: true
+retryOnFailure: true
+maxRetries: 1
+concurrency: 2
+
+LT:Options:
+  platform: "Windows 10"
+  build: "Playwright Test build"
+  name: "Playwright Certification Test"
+  network: true
+  video: true
+  console: true
+  visual: true
+  tunnel: false
+  tunnelName: ""
+  geoLocation: ""
+  
+# Environment Variables
+# env:
+#   LT_USERNAME: ${{LT_USERNAME}}
+#   LT_ACCESS_KEY: ${{LT_ACCESS_KEY}}
+
+# Pre-test setup
+pre:
+  - npm install
+  - npx playwright install --with-deps
+
+# Cache dependencies
+cacheKey: '{{ checksum "package-lock.json" }}'
+cacheDirectories:
+  - node_modules
+
+# Test Discovery
+testDiscovery:
+  type: raw
+  mode: dynamic
+  command: grep -lr '@RegressionTests' tests
+
+# Execute Playwright Tests
+testRunnerCommand: npx playwright test
+
+# Job Label
+jobLabel: [playwright-VanillaJS, win, autosplit] 
+
+# Enable Reports
+report: true
+
+#project name
+project:
+ name: 'unique project name'
