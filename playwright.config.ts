@@ -1,25 +1,25 @@
 import { defineConfig, devices } from '@playwright/test';
 import dotenv from 'dotenv';        //npm install dotenv --save-dev
 
-//lambdatest-capabilities
-const capabilities = {
-    browserName: "Chrome",
-    browserVersion: "latest",
-    "LT:Options": {
-        platform: "WINDOWS 10",
-        build: "Playwright Test from config",
-        name: "Playwright Test - Config File",
-        user: "arsharma111",
-        accessKey: "LT_7odLgeLge64DAjA29czpWghXmy208Iw3RcPPJFAdy67DJ7I",
-        network: true,
-        video: true,
-        console: true,
-        tunnel: false,
-        tunnelName: "",
-        geoLocation: "",
-        visual: true,
-    },
-};
+// //lambdatest-capabilities
+// const capabilities = {
+//     browserName: "Chrome",
+//     browserVersion: "latest",
+//     "LT:Options": {
+//         platform: "WINDOWS 10",
+//         build: "Playwright Test from config",
+//         name: "Playwright Test - Config File",
+//         user: "arsharma111",
+//         accessKey: "LT_7odLgeLge64DAjA29czpWghXmy208Iw3RcPPJFAdy67DJ7I",
+//         network: true,
+//         video: true,
+//         console: true,
+//         tunnel: false,
+//         tunnelName: "",
+//         geoLocation: "",
+//         visual: true,
+//     },
+// };
 
 /**
  * Read environment variables from file.
@@ -49,10 +49,10 @@ export default defineConfig({
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
  
   use: {
-    connectOptions: {
-      wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=
-            ${encodeURIComponent(JSON.stringify(capabilities))}`,
-    },
+    // connectOptions: {
+    //   wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=
+    //         ${encodeURIComponent(JSON.stringify(capabilities))}`,
+    // },
     baseURL: process.env.BASE_URL || 'https://ecommerce-playground.lambdatest.io/', // Example usage
     headless: process.env.CI ? true : false,
     /* Base URL to use in actions like `await page.goto('')`. */
